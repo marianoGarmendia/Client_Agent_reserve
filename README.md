@@ -18,5 +18,27 @@ Está en etapa de desarrollo pero ya se pueden apreciar sus funcionalidades
 
 Agentar simula la interacción con un recepcionista de un gimnasio que:
 
-- Tiene clases como 
+- Eliges tu clase : 
 > Functional  , woman strong, fit box, crossfit, high intensity y mas
+
+- En los horarios de : 
+> 7:00 a 21:00 (inclusive)
+
+- Debes dar tu dni (ficticio o real de 8 dígitos)
+
+
+
+---
+**Toda la conversación se puede dar de forma fluida y conversacional ya que es el objetivo de este proyecto**
+
+---
+
+### Si te gustó podes darle una ⭐ en [Github]()
+
+- [MarianoDev - Portfolio](https://www.marianodev.site/) 
+- [Linkedin](https://www.linkedin.com/in/mariano-garmendia-dev/)
+
+
+
+
+
