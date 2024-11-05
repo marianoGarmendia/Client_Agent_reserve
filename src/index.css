@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #171821;
+  color: #eee;
+  min-height: 100dvh;
+  font-family: "inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.inter-400 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-100 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.inter-300 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inter-600 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Scrollbar del textarea */
+
+::-webkit-scrollbar {
+  margin: 0 2px;
+  width: 4px; /* Ancho de la scrollbar */
+  background-color: transparent; /* Color de fondo */
+}
+
+.scroll_chat::-webkit-scrollbar {
+  display: none; /* Color de fondo */
+}
+
+::-webkit-scrollbar-thumb {
+  margin: 0 2px;
+  background-color: #808080; /* Color de la barra de desplazamiento */
+  border-radius: 4px; /* Esquinas redondeadas */
+}
+
+.textarea-scrollbar {
+  width: 100%;
+  /* height: 200px;  */
+  /* padding: 10px; */
+  resize: vertical; /* Si prefieres, puedes usar 'none' o 'horizontal' */
+  overflow: auto; /* Asegura que la barra de scroll aparezca cuando sea necesario */
+
+  /* Estilo del scrollbar en navegadores WebKit (Chrome, Safari, Edge) */
+}
+
+/* Estilos para la caja de mensajes */
+.box_chat {
+  scroll-behavior: smooth;
+}
