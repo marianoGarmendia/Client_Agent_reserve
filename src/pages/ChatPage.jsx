@@ -10,10 +10,6 @@ import reactLogo from "../assets/react.svg";
 
 import { ChatContext } from "../Context/ChatContext";
 
-const BACKEND_URL = import.meta.url.includes("localhost")
-  ? "http://localhost:3000"
-  : import.meta.env.VITE_BACKEND_URL;
-
 function ChatPage() {
   const {
     message,
@@ -45,16 +41,19 @@ function ChatPage() {
     setChunkText("");
     setMessage((prevMsg) => [...prevMsg, newMessageUser]);
     try {
-      const response = await fetch(`${BACKEND_URL}/event`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          message: newMessageUser.content,
-          threadId: threadId,
-        }),
-      });
+      const response = await fetch(
+        `https://api-reserve-agent.onrender.com/event`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            message: newMessageUser.content,
+            threadId: threadId,
+          }),
+        }
+      );
       if (response.status == 200) {
         if (!threadId) {
           const thread_id = response.headers.get("Thread_id");
