@@ -2,10 +2,6 @@ import { useContext } from "react";
 import PropTypes from "prop-types";
 import { ChatContext } from "../Context/ChatContext";
 
-const BACKEND_URL = import.meta.url.includes("localhost")
-  ? "http://localhost:3000"
-  : import.meta.env.VITE_BACKEND_URL;
-
 function ReserveConfirm({ reservationInfo }) {
   const { dia, dni, activity, hora } = reservationInfo;
   const chatContext = useContext(ChatContext);
@@ -18,22 +14,25 @@ function ReserveConfirm({ reservationInfo }) {
   const handleConfirm = async ({ send }) => {
     setConfirmarReserva(false);
     try {
-      const response = await fetch(`${BACKEND_URL}/validate`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          threadId: threadId,
-          send,
-          args: {
-            dia,
-            dni,
-            hora,
-            activity,
+      const response = await fetch(
+        `https://api-reserve-agent.onrender.com/validate`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
           },
-        }),
-      });
+          body: JSON.stringify({
+            threadId: threadId,
+            send,
+            args: {
+              dia,
+              dni,
+              hora,
+              activity,
+            },
+          }),
+        }
+      );
 
       const reader = response.body?.getReader();
       let done, value;
