@@ -5,9 +5,9 @@ import Wsp from "../SVG/Wsp";
 
 function InstructionsPage() {
   return (
-    <div className="flex flex-col items-center justify-around h-full w-full p-4   gap-4 text-pretty">
+    <div className="flex flex-col items-center  min-h-dvh w-full p-4 overflow-y-scroll    gap-4 text-pretty">
       <h1 className="font-bold my-2 text-[18px] text-center">
-        Agente de reservación de turnos para centro fitness
+        Agente de reservación de turnos para centro fitness (Versión Beta)
       </h1>
       <Link to="/" className="px-2 underline  hover:text-cyan-600">
         Agente {">"}
