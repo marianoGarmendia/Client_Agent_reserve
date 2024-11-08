@@ -10,7 +10,7 @@ import reactLogo from "../assets/react.svg";
 
 import { ChatContext } from "../Context/ChatContext";
 
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://api-reserve-agent.onrender.com";
 
 function ChatPage() {
   const {
