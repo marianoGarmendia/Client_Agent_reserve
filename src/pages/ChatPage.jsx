@@ -1,4 +1,5 @@
 import { useContext, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import { v4 as uuidv4 } from "uuid";
 import Logo from "../components/Logos";
@@ -124,10 +125,16 @@ function ChatPage() {
 
   return (
     <div className="flex w-full flex-col items-center justify-stretch py-2 h-full">
+      <Link
+        className="absolute left-10 top-4 hover:text-cyan-600"
+        to="/instructions"
+      >
+        {"< "}Info
+      </Link>
       <div className="flex flex-col items-center ">
         <div className="flex gap-4 py-2">
           <Logo image={langchainLogo} logo="light" />
-          <Logo image={reactLogo} logo="dark" />
+          <Logo image={reactLogo} logo="tailwind" />
         </div>
         <h1 className="my-6 text-xl">Reservation Agent</h1>
       </div>
