@@ -123,15 +123,17 @@ function ChatPage() {
   }, [streamIsDone, chunkText, setMessage]);
 
   return (
-    <>
-      <div className="flex gap-4 py-2">
-        <Logo image={langchainLogo} logo="light" />
-        <Logo image={reactLogo} logo="dark" />
+    <div className="flex w-full flex-col items-center justify-stretch py-2 h-full">
+      <div className="flex flex-col items-center ">
+        <div className="flex gap-4 py-2">
+          <Logo image={langchainLogo} logo="light" />
+          <Logo image={reactLogo} logo="dark" />
+        </div>
+        <h1 className="my-6 text-xl">Reservation Agent</h1>
       </div>
-      <h1 className="my-6 text-xl">Reservation Agent</h1>
       <form
         onSubmit={handleStream}
-        className="h-[400px] w-2/3 rounded-md bg-[#21222d] flex flex-col justify-between p-4"
+        className="h-full w-full md:w-2/3 rounded-md bg-[#21222d] flex flex-col justify-between p-2"
       >
         <div
           ref={chatContainer}
@@ -185,7 +187,7 @@ function ChatPage() {
           <SendSVG />
         </div>
       </form>
-    </>
+    </div>
   );
 }
 
