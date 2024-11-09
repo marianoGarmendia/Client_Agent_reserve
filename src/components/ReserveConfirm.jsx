@@ -2,7 +2,7 @@ import { useContext } from "react";
 import PropTypes from "prop-types";
 import { ChatContext } from "../Context/ChatContext";
 
-const BASE_URL = "https://api-reserve-agent.onrender.com";
+const BASE_URL = "https://apireserveagent-production.up.railway.app";
 
 function ReserveConfirm({ reservationInfo }) {
   const { dia, dni, activity, hora } = reservationInfo;
