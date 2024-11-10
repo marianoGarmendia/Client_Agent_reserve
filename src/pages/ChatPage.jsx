@@ -122,7 +122,7 @@ function ChatPage() {
   }, [streamIsDone, chunkText, setMessage]);
 
   return (
-    <div className="flex w-full flex-col items-center justify-stretch py-2 h-full">
+    <div className="flex w-full flex-col items-center justify-stretch py-4 h-full">
       <Link
         className="absolute left-10 top-4 hover:text-cyan-600"
         to="/instructions"
@@ -138,11 +138,11 @@ function ChatPage() {
       </div>
       <form
         onSubmit={handleStream}
-        className="h-full w-full md:w-2/3 rounded-md bg-[#21222d] flex flex-col justify-between p-2"
+        className="h-[70%] w-full md:w-2/3 rounded-md bg-[#21222d] flex flex-col justify-between p-2"
       >
         <div
           ref={chatContainer}
-          className="flex-grow  flex flex-col gap-2  w-full overflow-y-scroll scroll_chat box_chat py-2 "
+          className="h-[500px] md:h-[350px]  flex flex-col gap-2  w-full overflow-y-scroll scroll_chat box_chat py-2 "
         >
           {message &&
             message.length > 0 &&
